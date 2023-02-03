@@ -1,2 +1,20 @@
 <p>products works!</p>
 {{title}}
+<br>
+<table>
+  <tr>
+    <th>id</th>
+    <th>title</th>
+    <th>price</th>
+    <th>quantity</th>
+    <th>Likes</th>
+  </tr>
+
+  <tr *ngFor="let p of listProducts">
+    <td><p>{{p.id}}</p></td>
+    <td><p>{{p.title}}</p></td>
+    <td>{{p.price}}</td>
+    <td>{{p.quantity}}</td>
+    <td>{{p.like}}</td>
+  </tr>
+</table>
