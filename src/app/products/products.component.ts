@@ -9,6 +9,7 @@ import {Product} from "../core/model/products";
 export class ProductsComponent implements OnInit {
   title : string ="Products";
   listProducts !: Product[];
+  priceMax!: number;
   constructor() { }
 
   ngOnInit(): void {
