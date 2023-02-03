@@ -18,4 +18,11 @@ export class ProductsComponent implements OnInit {
       {id: "3", title: "T-shirt 3", price: 16, quantity: 8, like: 0}, ]
   }
 
+  buy(i:number) {
+    this.listProducts[i].quantity--;
+  }
+
+  like(i: number) {
+    this.listProducts[i].like++;
+  }
 }
