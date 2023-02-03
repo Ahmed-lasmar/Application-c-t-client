@@ -1,20 +1,16 @@
-<p>products works!</p>
-{{title}}
-<br>
-<table>
-  <tr>
-    <th>id</th>
-    <th>title</th>
-    <th>price</th>
-    <th>quantity</th>
-    <th>Likes</th>
-  </tr>
+<h1 class="htitle">{{title}}</h1>
+<div class="row">
+<div class="col-md-4" *ngFor="let p of listProducts" >
+<div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{p.title}}</h5>
+    <p class="card-text">Price: {{p.price}}, Quantity: {{p.quantity}}</p>
+    <a href="#" class="btn btn-primary">Like {{p.like}}</a>
+  </div>
+</div>
+</div>
+</div>
 
-  <tr *ngFor="let p of listProducts">
-    <td><p>{{p.id}}</p></td>
-    <td><p>{{p.title}}</p></td>
-    <td>{{p.price}}</td>
-    <td>{{p.quantity}}</td>
-    <td>{{p.like}}</td>
-  </tr>
-</table>
+
+

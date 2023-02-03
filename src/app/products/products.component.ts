@@ -7,7 +7,7 @@ import {Product} from "../core/model/products";
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit {
-  title : string ="salem";
+  title : string ="Products";
   listProducts !: Product[];
   constructor() { }
 
