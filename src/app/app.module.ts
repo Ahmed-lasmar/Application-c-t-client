@@ -9,6 +9,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { OffresEmploiComponent } from './offres-emploi/offres-emploi.component';
 import { ArticlesComponent } from './articles/articles.component';
 import {RouterModule} from "@angular/router";
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import {RouterModule} from "@angular/router";
     ProductsComponent,
     NavbarComponent,
     OffresEmploiComponent,
-    ArticlesComponent
+    ArticlesComponent,
+    PagenotfoundComponent
   ],
   imports: [
     BrowserModule,

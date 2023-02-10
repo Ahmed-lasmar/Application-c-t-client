@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 import {RouterModule, Routes} from "@angular/router";
 import {ProductsComponent} from "./products/products.component";
 import {OffresEmploiComponent} from "./offres-emploi/offres-emploi.component";
+import {PagenotfoundComponent} from "./pagenotfound/pagenotfound.component";
 
 const routes: Routes =[
   {path:'',redirectTo:'products',pathMatch:'full'},
   {path:'products',component:ProductsComponent},
-  {path:'offres',component:OffresEmploiComponent}
+  {path:'offres',component:OffresEmploiComponent},
+  {path:'**',pathMatch:'full', component:PagenotfoundComponent}
 
 ]
 
