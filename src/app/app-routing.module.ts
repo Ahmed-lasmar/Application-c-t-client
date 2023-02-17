@@ -5,10 +5,12 @@ import {ProductsComponent} from "./products/products.component";
 import {OffresEmploiComponent} from "./offres-emploi/offres-emploi.component";
 import {PagenotfoundComponent} from "./pagenotfound/pagenotfound.component";
 import {ProductdetailComponent} from "./productdetail/productdetail.component";
+import {AddproductComponent} from "./addproduct/addproduct.component";
 
 const routes: Routes =[
   {path:'',redirectTo:'products',pathMatch:'full'},
   {path:'products',component:ProductsComponent},
+  {path:'products/add',component:AddproductComponent},
   {path:'offres',component:OffresEmploiComponent},
   {path:'product/:id',component:ProductdetailComponent},
   {path:'**',pathMatch:'full', component:PagenotfoundComponent}

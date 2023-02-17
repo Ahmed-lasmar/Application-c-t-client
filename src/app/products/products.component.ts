@@ -8,8 +8,10 @@ import {Product} from "../core/model/products";
 })
 export class ProductsComponent implements OnInit {
   title : string ="Products";
-  listProducts !: Product[];
+  public listProducts !: Product[];
   priceMax!: number;
+
+
   constructor() { }
 
   ngOnInit(): void {
@@ -22,7 +24,9 @@ export class ProductsComponent implements OnInit {
   buy(i:number) {
     this.listProducts[i].quantity--;
   }
-
+  ajouterProduit(nouveauProduit:Product) {
+    this.listProducts.push(nouveauProduit);
+  }
   like(i: number) {
     this.listProducts[i].like++;
   }
