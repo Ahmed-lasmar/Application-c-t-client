@@ -12,6 +12,7 @@ import {RouterModule} from "@angular/router";
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { ProductdetailComponent } from './productdetail/productdetail.component';
 import { AddproductComponent } from './addproduct/addproduct.component';
+import { TodoListComponent } from './todo-list/todo-list.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { AddproductComponent } from './addproduct/addproduct.component';
     ArticlesComponent,
     PagenotfoundComponent,
     ProductdetailComponent,
-    AddproductComponent
+    AddproductComponent,
+    TodoListComponent
   ],
   imports: [
     BrowserModule,
