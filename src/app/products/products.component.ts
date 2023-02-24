@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Product} from "../core/model/products";
+import {ProductService} from "../Service/product.service";
+import {CalculService} from "../Service/calcul.service";
 
 @Component({
   selector: 'app-products',
@@ -8,21 +10,30 @@ import {Product} from "../core/model/products";
 })
 export class ProductsComponent implements OnInit {
   title : string ="Products";
-  listProducts !: Product[];
+  public listProducts !: Product[];
   priceMax!: number;
-  constructor() { }
+  emG!:number;
+
+
+  constructor(private serviceProduct:ProductService,private sc:CalculService) {
+    this.listProducts=serviceProduct.lProducts;
+  }
 
   ngOnInit(): void {
-    this.listProducts=[
-      {id: "1", title: "T-shirt 1", price: 18, quantity: 0, like: 0},
-      {id: "2", title: "T-shirt 2", price: 21, quantity: 10, like: 0},
-      {id: "3", title: "T-shirt 3", price: 16, quantity: 8, like: 0}, ]
+
+  }
+
+  calde0(){
+    this.emG=this.sc.getNumberOf(this.listProducts,"quantity",0);
   }
 
   buy(i:number) {
     this.listProducts[i].quantity--;
+    //this.calde0();
   }
-
+  ajouterProduit(nouveauProduit:Product) {
+    this.listProducts.push(nouveauProduit);
+  }
   like(i: number) {
     this.listProducts[i].like++;
   }
