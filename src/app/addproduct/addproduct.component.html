@@ -35,7 +35,7 @@
   </div>
 
 
-  <button type="submit" class="btn btn-primary" [disabled]="f.invalid">Submit</button>
+  <button type="submit" class="btn btn-primary" [disabled]="f.invalid" (click)="addP(p)">Submit</button>
 </form>
 
 {{p.id}}
