@@ -3,7 +3,7 @@ import {Product} from "../core/model/products";
 import {ProductsComponent} from "../products/products.component";
 
 @Component({
-  selector: 'app-addproduct',
+  selector: 'app-add product',
   templateUrl: './addproduct.component.html',
   styleUrls: ['./addproduct.component.css']
 })

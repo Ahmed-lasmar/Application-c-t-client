@@ -10,7 +10,6 @@ import { OffresEmploiComponent } from './offres-emploi/offres-emploi.component';
 import { ArticlesComponent } from './articles/articles.component';
 import {RouterModule} from "@angular/router";
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
-import { FooterComponent } from './footer/footer.component';
 import { ProductdetailComponent } from './productdetail/productdetail.component';
 import { AddproductComponent } from './addproduct/addproduct.component';
 
@@ -22,7 +21,6 @@ import { AddproductComponent } from './addproduct/addproduct.component';
     OffresEmploiComponent,
     ArticlesComponent,
     PagenotfoundComponent,
-    FooterComponent,
     ProductdetailComponent,
     AddproductComponent
   ],
