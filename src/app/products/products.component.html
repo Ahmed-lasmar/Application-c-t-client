@@ -21,7 +21,7 @@
       Price: {{p.price}}
     </div>
     <button type="button" class="btn btn-danger"  style="margin: 0.1em" (click)="like(i)">{{p.like}} Like</button>
-
+    <button type="button" class="btn btn-danger"  style="margin: 0.1em" (click)="delete(i)"> Delete</button>
     <a [routerLink]="['/product',p.id]"> <button type="button"  class="btn btn-info"  style="margin: 0.1em">details</button></a>
 
     <button type="button" class="btn btn-primary" (click)="buy(i)" [disabled]="p.quantity<=0">

@@ -3,6 +3,8 @@ import {Product} from "../core/model/products";
 import {ProductsComponent} from "../products/products.component";
 import {ProductService} from "../Service/product.service";
 import {Router} from "@angular/router";
+import {HttpClient} from "@angular/common/http";
+import {ConsumProductService} from "../Service/consum-product.service";
 
 @Component({
   selector: 'app-add product',
@@ -13,11 +15,13 @@ export class AddproductComponent implements OnInit {
 
   p !: Product;
 
-  constructor(private serviceProduct:ProductService,private route:Router) { }
+  constructor(private serviceProduct:ProductService,private route:Router,private CunsProd:ConsumProductService) { }
 
   addP (p:Product){
-    this.serviceProduct.addProd(p);
-    this.route.navigateByUrl("/products");
+    this.p.like = 0;
+    this.CunsProd.PostProducts(this.p).subscribe({
+      next:()=>this.route.navigateByUrl("/products")
+    });
   }
 
   ngOnInit(): void {
